@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ChakrenApp: App {
+    @StateObject private var chakraVM = ChakraViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(chakraVM) // global für alle Unterviews
         }
     }
 }
