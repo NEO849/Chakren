@@ -31,12 +31,13 @@ class ChakraViewModel: ObservableObject {
     
     /// Aktualisiert das Energielevel eines bestimmten Chakras und setzt es als aktiv.
     func updateEnergy(for chakraId: Int, newValue: Double) {
-        if let index = chakras.firstIndex(where: { $0.id == chakraId }) {
-            chakras[index].energyLevel = newValue
+        guard let index = chakras.firstIndex(where: { $0.id == chakraId }) else { return }
+        chakras[index].energyLevel = newValue
+        if chakras[index].id == selectedChakra?.id {
             selectedChakra = chakras[index] // Triggert UI
         }
     }
-
+    
     /// Setzt das aktiv angezeigte Chakra über ID
     func selectChakra(by id: Int) {
         selectedChakra = chakras.first(where: { $0.id == id })
