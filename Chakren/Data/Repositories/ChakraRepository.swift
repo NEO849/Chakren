@@ -7,10 +7,10 @@
 
 import Foundation
 
-/// Zentrale Klasse für die Verwaltung von Chakra-Datenquellen
+/// Verwaltet die Chakra-Datenquelle (z. B. JSON-Datei im Bundle)
 class ChakraRepository {
     static func fetchChakras() throws -> [Chakra] {
-         // 1. JSON-Dateipfad im Bundle suchen
+         // 1. JSON-Dateipfad im App-Bundle suchen
          guard let url = Bundle.main.url(forResource: "chakras", withExtension: "json") else {
              throw URLError(.fileDoesNotExist)
          }
