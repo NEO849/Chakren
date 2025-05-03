@@ -13,7 +13,7 @@ import simd
 struct Chakra: Codable, Identifiable {
     let id: Int
     let name: String
-    let colorComponents: [Double]          // Farbkomponenten [R, G, B, A]
+    var colorComponents: [Double]          // Farbkomponenten [R, G, B, A]
     var energyLevel: Double                // Energiezustand (0.0–1.0)
 
     /// Konvertiert die Farbdaten in einen Metal-kompatiblen Farbwert (Float-Vektor)
