@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "name": "Wurzel",
+    "color": [1.0, 0.0, 0.0, 1.0],
+    "energyLevel": 0.5
+  },
+  {
+    "id": 1,
+    "name": "Sakral",
+    "color": [1.0, 0.5, 0.0, 1.0],
+    "energyLevel": 0.6
+  },
+  {
+    "id": 2,
+    "name": "Solarplexus",
+    "color": [1.0, 1.0, 0.0, 1.0],
+    "energyLevel": 0.4
+  },
+  {
+    "id": 3,
+    "name": "Herz",
+    "color": [0.0, 1.0, 0.0, 1.0],
+    "energyLevel": 0.8
+  },
+  {
+    "id": 4,
+    "name": "Hals",
+    "color": [0.0, 0.5, 1.0, 1.0],
+    "energyLevel": 0.3
+  },
+  {
+    "id": 5,
+    "name": "Stirn",
+    "color": [0.3, 0.0, 0.8, 1.0],
+    "energyLevel": 0.7
+  },
+  {
+    "id": 6,
+    "name": "Krone",
+    "color": [0.8, 0.0, 1.0, 1.0],
+    "energyLevel": 0.9
+  }
+]
