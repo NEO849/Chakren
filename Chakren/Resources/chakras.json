@@ -1,44 +1,58 @@
 [
   {
-    "id": 0,
-    "name": "Wurzel",
-    "color": [1.0, 0.0, 0.0, 1.0],
-    "energyLevel": 0.5
-  },
-  {
     "id": 1,
-    "name": "Sakral",
-    "color": [1.0, 0.5, 0.0, 1.0],
-    "energyLevel": 0.6
+    "name": "Wurzelchakra",
+    "description": "Stabilität, Sicherheit, Erdung",
+    "colorComponents": [0.8, 0.1, 0.1, 1.0],
+    "frequency": 396,
+    "energyLevel": 7
   },
   {
     "id": 2,
-    "name": "Solarplexus",
-    "color": [1.0, 1.0, 0.0, 1.0],
-    "energyLevel": 0.4
+    "name": "Sakralchakra",
+    "description": "Kreativität, Sexualität",
+    "colorComponents": [1.0, 0.5, 0.1, 1.0],
+    "frequency": 417,
+    "energyLevel": 6
   },
   {
     "id": 3,
-    "name": "Herz",
-    "color": [0.0, 1.0, 0.0, 1.0],
-    "energyLevel": 0.8
+    "name": "Solarplexuschakra",
+    "description": "Selbstbewusstsein, Wille",
+    "colorComponents": [1.0, 1.0, 0.0, 1.0],
+    "frequency": 528,
+    "energyLevel": 5
   },
   {
     "id": 4,
-    "name": "Hals",
-    "color": [0.0, 0.5, 1.0, 1.0],
-    "energyLevel": 0.3
+    "name": "Herzchakra",
+    "description": "Liebe, Heilung, Mitgefühl",
+    "colorComponents": [0.0, 0.8, 0.2, 1.0],
+    "frequency": 639,
+    "energyLevel": 8
   },
   {
     "id": 5,
-    "name": "Stirn",
-    "color": [0.3, 0.0, 0.8, 1.0],
-    "energyLevel": 0.7
+    "name": "Halschakra",
+    "description": "Ausdruck, Kommunikation",
+    "colorComponents": [0.0, 0.7, 0.8, 1.0],
+    "frequency": 741,
+    "energyLevel": 6
   },
   {
     "id": 6,
-    "name": "Krone",
-    "color": [0.8, 0.0, 1.0, 1.0],
-    "energyLevel": 0.9
+    "name": "Stirnchakra",
+    "description": "Intuition, Erkenntnis",
+    "colorComponents": [0.4, 0.0, 0.8, 1.0],
+    "frequency": 852,
+    "energyLevel": 9
+  },
+  {
+    "id": 7,
+    "name": "Kronenchakra",
+    "description": "Spiritualität, Verbindung zum Höheren",
+    "colorComponents": [0.8, 0.8, 1.0, 1.0],
+    "frequency": 963,
+    "energyLevel": 10
   }
 ]

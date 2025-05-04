@@ -6,36 +6,14 @@
 //
 
 import Foundation
-import simd
 
-/// Das Chakra-Modell stellt ein Energiezentrum dar.
-/// - Nutzt `SIMD4<Float>` für direkte Kompatibilität mit MetalKit Shadern.
-struct Chakra: Codable, Identifiable {
-    let id: Int
-    let name: String
-    var colorComponents: [Double]          // Farbkomponenten [R, G, B, A]
-    var energyLevel: Double                // Energiezustand (0.0–1.0)
-
-    /// Konvertiert die Farbdaten in einen Metal-kompatiblen Farbwert (Float-Vektor)
-    var simdColor: SIMD4<Float> {
-        SIMD4<Float>(
-            Float(colorComponents[0]),
-            Float(colorComponents[1]),
-            Float(colorComponents[2]),
-            Float(colorComponents[3])
-        )
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case colorComponents = "color"   // Schlüssel in JSON-Datei
-        case energyLevel
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
+struct Chakra: Identifiable, Codable {
+    let id: Int                      // Chakra-Nummer (1-7)
+    let name: String                 // Name (z.B. "Wurzelchakra")
+    let description: String          // Beschreibung
+    var colorComponents: [Double]    // RGBA-Werte als Array (0.0 - 1.0)
+    var frequency: Double            // Optionale Frequenz (z.B. 396 Hz)
+    var energyLevel: Double          // Energie-Level (1-10)
     
     static func == (lhs: Chakra, rhs: Chakra) -> Bool {
         lhs.id == rhs.id
