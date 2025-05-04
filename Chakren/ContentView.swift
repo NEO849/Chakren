@@ -7,18 +7,37 @@
 
 import SwiftUI
 
+/// Zeigt die Chakra-Auswahlleiste und die Metal-Animation.
 struct ContentView: View {
+    @EnvironmentObject var viewModel: ChakraViewModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 0) {
+            // Auswahlleiste zur Auswahl des aktiven Chakras
+            ChakraSelectorView()
+                .padding(.top, 16)
+
+            Spacer()
+
+            // Anzeige des animierten Chakras via MetalKit
+            ChakraMetalView()
+                .frame(width: 300, height: 300)
+
+            Spacer()
+
+            // Anzeige des aktuellen Chakra-Namens
+            if let selected = viewModel.selectedChakra {
+                Text("Aktives Chakra: \(selected.name)")
+                    .font(.title2)
+                    .padding(.bottom)
+            }
         }
-        .padding()
+        .background(Color.black.ignoresSafeArea())
+        .foregroundColor(.white)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(ChakraViewModel())
 }
