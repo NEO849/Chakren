@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import SwiftUI
 
 /// Logikschicht zwischen Model (Chakra) und View.
 class ChakraViewModel: ObservableObject {
@@ -21,11 +20,10 @@ class ChakraViewModel: ObservableObject {
     /// Lädt die Chakren über das Repository und setzt das erste als aktiv
     func loadChakras() {
         do {
-            let result = try ChakraRepository.fetchChakras()
-            chakras = result
-            selectedChakra = result.first
+            chakras =  try ChakraRepository.fetchChakras()
+            selectedChakra = chakras.first
         } catch {
-            print("Fehler beim Laden der Chakren: \(error.localizedDescription)")
+            print("Fehler beim fetchen der Chakren (Repo-Schicht): \(error.localizedDescription)")
         }
     }
     
@@ -40,6 +38,8 @@ class ChakraViewModel: ObservableObject {
     
     /// Setzt das aktiv angezeigte Chakra über ID
     func selectChakra(by id: Int) {
-        selectedChakra = chakras.first(where: { $0.id == id })
+        if let found = chakras.first(where: { $0.id == id }) {
+            selectedChakra = found
+        }
     }
 }
